@@ -1,0 +1,221 @@
+61025 586576-07-24 22:59:23.832 -0400
+1657220394.831522 PSMTabBarControl.m:1477 (-[PSMTabBarControl mouseDragged:]): Start dragging with mouse down event NSEvent: type=LMouseDown loc=(433.051,617.855) time=1173109.9 flags=0 win=0x11c9166f0 winNum=21615 ctxt=0x0 evNum=14796 click=1 buttonNumber=0 pressure=1 deviceID:0x400000076bd6842 subtype=NSEventSubtypeTouch in window 0x11c9166f0 with frame {{2061, 499}, {976, 630}}
+1657220394.841051 PSMTabDragAssistant.m:909 (-[PSMTabDragAssistant distributePlaceholdersInTabBar:]): distributePlaceholdersInTabBar draggedCell=<PSMTabBarCell: 0x14818cc80 representedObject=<NSTabViewItem 'nvim': 0x600001485e60> identifier=<PTYTab: 0x148176fd0 label=nvim objectCount=1> objectCount=1>
+1657220394.841250 PSMTabDragAssistant.m:879 (-[PSMTabDragAssistant distributePlaceholdersInTabBar:withDraggedCell:]): distributePlaceholdersInTabBar:withDraggedCell:<PSMTabBarCell: 0x14818cc80 representedObject=<NSTabViewItem 'nvim': 0x600001485e60> identifier=<PTYTab: 0x148176fd0 label=nvim objectCount=1> objectCount=1>
+1657220394.848214 PSMTabDragAssistant.m:190 (-[PSMTabDragAssistant startDraggingCell:fromTabBar:withMouseDownEvent:]): Begin dragging session for tab bar 0x14816b260
+1657220394.850508 PSMTabBarControl.m:1624 (-[PSMTabBarControl beginDraggingSessionWithItems:event:source:]): Begin dragging tab bar control 0x14816b260 with event NSEvent: type=LMouseDown loc=(433.051,617.855) time=1173109.9 flags=0 win=0x11c9166f0 winNum=21615 ctxt=0x0 evNum=14796 click=1 buttonNumber=0 pressure=1 deviceID:0x400000076bd6842 subtype=NSEventSubtypeTouch source from
+(
+	0   iTerm2                              0x00000001040b21b4 -[PSMTabBarControl beginDraggingSessionWithItems:event:source:] + 196
+	1   iTerm2                              0x00000001040fc3e0 -[PSMTabDragAssistant startDraggingCell:fromTabBar:withMouseDownEvent:] + 1176
+	2   iTerm2                              0x00000001040b195c -[PSMTabBarControl mouseDragged:] + 1764
+	3   AppKit                              0x00000001bcd0da0c -[NSWindow(NSEventRouting) _reallySendEvent:isDelayedEvent:] + 5920
+	4   AppKit                              0x00000001bcd0c080 -[NSWindow(NSEventRouting) sendEvent:] + 348
+	5   AppKit                              0x00000001bcd0afe4 -[NSApplication(NSEvent) sendEvent:] + 2776
+	6   iTerm2                              0x0000000104149144 -[iTermApplication sendEvent:] + 372
+	7   AppKit                              0x00000001bcfc3588 -[NSApplication _handleEvent:] + 76
+	8   AppKit                              0x00000001bcb8c3d8 -[NSApplication run] + 636
+	9   AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	10  iTerm2                              0x000000010409f5d4 main + 132
+	11  dyld                                0x00000001055950f4 start + 520
+)
+1657220394.854151 PSMTabDragAssistant.m:698 (-[PSMTabDragAssistant draggingBeganAt:]): Drag of 0x14816b260 began with current event NSEvent: type=LMouseDragged loc=(443.199,617.855) time=1173110.1 flags=0 win=0x11c9166f0 winNum=21615 ctxt=0x0 evNum=14796 click=1 buttonNumber=0 pressure=1 deltaX=3.000000 deltaY=0.000000 deviceID:0x400000076bd6842 subtype=NSEventSubtypeTouch in window with frame {{2061, 499}, {976, 630}} from
+(
+	0   iTerm2                              0x00000001040fe948 -[PSMTabDragAssistant draggingBeganAt:] + 420
+	1   AppKit                              0x00000001bceb89f8 -[NSCoreDragManager _dragUntilMouseUp:accepted:] + 320
+	2   AppKit                              0x00000001bd10fc5c _handleBeginDraggingSession + 108
+	3   CoreFoundation                      0x00000001ba047dac __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36
+	4   CoreFoundation                      0x00000001ba047bf8 __CFRunLoopDoObservers + 572
+	5   CoreFoundation                      0x00000001ba04663c CFRunLoopRunSpecific + 512
+	6   HIToolbox                           0x00000001c2bbc990 RunCurrentEventLoopInMode + 292
+	7   HIToolbox                           0x00000001c2bbc61c ReceiveNextEventCommon + 320
+	8   HIToolbox                           0x00000001c2bbc4c4 _BlockUntilNextEventMatchingListInModeWithFilter + 72
+	9   AppKit                              0x00000001bcb9baec _DPSNextEvent + 844
+	10  AppKit                              0x00000001bcb9a390 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1332
+	11  AppKit                              0x00000001bcb8c3b0 -[NSApplication run] + 596
+	12  AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	13  iTerm2                              0x000000010409f5d4 main + 132
+	14  dyld                                0x00000001055950f4 start + 520
+)
+1657220395.560626 PSMTabDragAssistant.m:650 (-[PSMTabDragAssistant finishDrag]): Drag of 0x14816b260 finished from
+(
+	0   iTerm2                              0x00000001040fe3f8 -[PSMTabDragAssistant finishDrag] + 244
+	1   iTerm2                              0x00000001040fd814 -[PSMTabDragAssistant reallyPerformDragOperation:] + 2772
+	2   iTerm2                              0x00000001040fcd30 -[PSMTabDragAssistant performDragOperation:] + 36
+	3   iTerm2                              0x00000001040b29dc -[PSMTabBarControl performDragOperation:] + 160
+	4   AppKit                              0x00000001bcebb850 NSCoreDragReceiveMessageProc + 476
+	5   HIServices                          0x00000001bfc27c5c CallReceiveMessageCollectionWithMessage + 112
+	6   HIServices                          0x00000001bfc21b30 DoMultipartDropMessage + 104
+	7   HIServices                          0x00000001bfc218ec DoDropMessage + 56
+	8   HIServices                          0x00000001bfc203f0 DragInApplication + 808
+	9   HIServices                          0x00000001bfc1ef10 CoreDragStartDragging + 556
+	10  AppKit                              0x00000001bceb8d38 -[NSCoreDragManager _dragUntilMouseUp:accepted:] + 1152
+	11  AppKit                              0x00000001bd10fc5c _handleBeginDraggingSession + 108
+	12  CoreFoundation                      0x00000001ba047dac __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36
+	13  CoreFoundation                      0x00000001ba047bf8 __CFRunLoopDoObservers + 572
+	14  CoreFoundation                      0x00000001ba04663c CFRunLoopRunSpecific + 512
+	15  HIToolbox                           0x00000001c2bbc990 RunCurrentEventLoopInMode + 292
+	16  HIToolbox                           0x00000001c2bbc61c ReceiveNextEventCommon + 320
+	17  HIToolbox                           0x00000001c2bbc4c4 _BlockUntilNextEventMatchingListInModeWithFilter + 72
+	18  AppKit                              0x00000001bcb9baec _DPSNextEvent + 844
+	19  AppKit                              0x00000001bcb9a390 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1332
+	20  AppKit                              0x00000001bcb8c3b0 -[NSApplication run] + 596
+	21  AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	22  iTerm2                              0x000000010409f5d4 main + 132
+	23  dyld                                0x00000001055950f4 start + 520
+)
+1657220395.586976 PSMTabDragAssistant.m:650 (-[PSMTabDragAssistant finishDrag]): Drag of 0x0 finished from
+(
+	0   iTerm2                              0x00000001040fe3f8 -[PSMTabDragAssistant finishDrag] + 244
+	1   AppKit                              0x00000001bceb8f4c -[NSCoreDragManager _dragUntilMouseUp:accepted:] + 1684
+	2   AppKit                              0x00000001bd10fc5c _handleBeginDraggingSession + 108
+	3   CoreFoundation                      0x00000001ba047dac __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36
+	4   CoreFoundation                      0x00000001ba047bf8 __CFRunLoopDoObservers + 572
+	5   CoreFoundation                      0x00000001ba04663c CFRunLoopRunSpecific + 512
+	6   HIToolbox                           0x00000001c2bbc990 RunCurrentEventLoopInMode + 292
+	7   HIToolbox                           0x00000001c2bbc61c ReceiveNextEventCommon + 320
+	8   HIToolbox                           0x00000001c2bbc4c4 _BlockUntilNextEventMatchingListInModeWithFilter + 72
+	9   AppKit                              0x00000001bcb9baec _DPSNextEvent + 844
+	10  AppKit                              0x00000001bcb9a390 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1332
+	11  AppKit                              0x00000001bcb8c3b0 -[NSApplication run] + 596
+	12  AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	13  iTerm2                              0x000000010409f5d4 main + 132
+	14  dyld                                0x00000001055950f4 start + 520
+)
+1657220398.497293 PSMTabBarControl.m:1477 (-[PSMTabBarControl mouseDragged:]): Start dragging with mouse down event NSEvent: type=LMouseDown loc=(274.246,609.648) time=1173113.6 flags=0x100008 win=0x11c9166f0 winNum=21615 ctxt=0x0 evNum=14797 click=1 buttonNumber=0 pressure=1 deviceID:0x400000076bd6842 subtype=NSEventSubtypeTouch in window 0x11c9166f0 with frame {{2061, 499}, {976, 630}}
+1657220398.502550 PSMTabDragAssistant.m:909 (-[PSMTabDragAssistant distributePlaceholdersInTabBar:]): distributePlaceholdersInTabBar draggedCell=<PSMTabBarCell: 0x14818cc80 representedObject=<NSTabViewItem 'nvim': 0x600001485e60> identifier=<PTYTab: 0x148176fd0 label=nvim objectCount=1> objectCount=1>
+1657220398.502852 PSMTabDragAssistant.m:879 (-[PSMTabDragAssistant distributePlaceholdersInTabBar:withDraggedCell:]): distributePlaceholdersInTabBar:withDraggedCell:<PSMTabBarCell: 0x14818cc80 representedObject=<NSTabViewItem 'nvim': 0x600001485e60> identifier=<PTYTab: 0x148176fd0 label=nvim objectCount=1> objectCount=1>
+1657220398.510474 PSMTabDragAssistant.m:190 (-[PSMTabDragAssistant startDraggingCell:fromTabBar:withMouseDownEvent:]): Begin dragging session for tab bar 0x14816b260
+1657220398.513192 PSMTabBarControl.m:1624 (-[PSMTabBarControl beginDraggingSessionWithItems:event:source:]): Begin dragging tab bar control 0x14816b260 with event NSEvent: type=LMouseDown loc=(274.246,609.648) time=1173113.6 flags=0x100008 win=0x11c9166f0 winNum=21615 ctxt=0x0 evNum=14797 click=1 buttonNumber=0 pressure=1 deviceID:0x400000076bd6842 subtype=NSEventSubtypeTouch source from
+(
+	0   iTerm2                              0x00000001040b21b4 -[PSMTabBarControl beginDraggingSessionWithItems:event:source:] + 196
+	1   iTerm2                              0x00000001040fc3e0 -[PSMTabDragAssistant startDraggingCell:fromTabBar:withMouseDownEvent:] + 1176
+	2   iTerm2                              0x00000001040b195c -[PSMTabBarControl mouseDragged:] + 1764
+	3   AppKit                              0x00000001bcd0da0c -[NSWindow(NSEventRouting) _reallySendEvent:isDelayedEvent:] + 5920
+	4   AppKit                              0x00000001bcd0c080 -[NSWindow(NSEventRouting) sendEvent:] + 348
+	5   AppKit                              0x00000001bcd0afe4 -[NSApplication(NSEvent) sendEvent:] + 2776
+	6   iTerm2                              0x0000000104149144 -[iTermApplication sendEvent:] + 372
+	7   AppKit                              0x00000001bcfc3588 -[NSApplication _handleEvent:] + 76
+	8   AppKit                              0x00000001bcb8c3d8 -[NSApplication run] + 636
+	9   AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	10  iTerm2                              0x000000010409f5d4 main + 132
+	11  dyld                                0x00000001055950f4 start + 520
+)
+1657220398.516233 PSMTabDragAssistant.m:698 (-[PSMTabDragAssistant draggingBeganAt:]): Drag of 0x14816b260 began with current event NSEvent: type=LMouseDragged loc=(290.121,610.223) time=1173113.8 flags=0x100008 win=0x11c9166f0 winNum=21615 ctxt=0x0 evNum=14797 click=1 buttonNumber=0 pressure=1 deltaX=8.000000 deltaY=0.000000 deviceID:0x400000076bd6842 subtype=NSEventSubtypeTouch in window with frame {{2061, 499}, {976, 630}} from
+(
+	0   iTerm2                              0x00000001040fe948 -[PSMTabDragAssistant draggingBeganAt:] + 420
+	1   AppKit                              0x00000001bceb89f8 -[NSCoreDragManager _dragUntilMouseUp:accepted:] + 320
+	2   AppKit                              0x00000001bd10fc5c _handleBeginDraggingSession + 108
+	3   CoreFoundation                      0x00000001ba047dac __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36
+	4   CoreFoundation                      0x00000001ba047bf8 __CFRunLoopDoObservers + 572
+	5   CoreFoundation                      0x00000001ba04663c CFRunLoopRunSpecific + 512
+	6   HIToolbox                           0x00000001c2bbc990 RunCurrentEventLoopInMode + 292
+	7   HIToolbox                           0x00000001c2bbc61c ReceiveNextEventCommon + 320
+	8   HIToolbox                           0x00000001c2bbc4c4 _BlockUntilNextEventMatchingListInModeWithFilter + 72
+	9   AppKit                              0x00000001bcb9baec _DPSNextEvent + 844
+	10  AppKit                              0x00000001bcb9a390 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1332
+	11  AppKit                              0x00000001bcb8c3b0 -[NSApplication run] + 596
+	12  AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	13  iTerm2                              0x000000010409f5d4 main + 132
+	14  dyld                                0x00000001055950f4 start + 520
+)
+1657220399.070841 PSMTabDragAssistant.m:909 (-[PSMTabDragAssistant distributePlaceholdersInTabBar:]): distributePlaceholdersInTabBar draggedCell=<PSMTabBarCell: 0x14818cc80 representedObject=<NSTabViewItem 'nvim': 0x600001485e60> identifier=<PTYTab: 0x148176fd0 label=nvim objectCount=1> objectCount=1>
+1657220399.503693 PSMTabDragAssistant.m:650 (-[PSMTabDragAssistant finishDrag]): Drag of 0x14816b260 finished from
+(
+	0   iTerm2                              0x00000001040fe3f8 -[PSMTabDragAssistant finishDrag] + 244
+	1   iTerm2                              0x00000001040fd814 -[PSMTabDragAssistant reallyPerformDragOperation:] + 2772
+	2   iTerm2                              0x00000001040fcd30 -[PSMTabDragAssistant performDragOperation:] + 36
+	3   iTerm2                              0x00000001040b29dc -[PSMTabBarControl performDragOperation:] + 160
+	4   AppKit                              0x00000001bcebb850 NSCoreDragReceiveMessageProc + 476
+	5   HIServices                          0x00000001bfc27c5c CallReceiveMessageCollectionWithMessage + 112
+	6   HIServices                          0x00000001bfc21b30 DoMultipartDropMessage + 104
+	7   HIServices                          0x00000001bfc218ec DoDropMessage + 56
+	8   HIServices                          0x00000001bfc203f0 DragInApplication + 808
+	9   HIServices                          0x00000001bfc1ef10 CoreDragStartDragging + 556
+	10  AppKit                              0x00000001bceb8d38 -[NSCoreDragManager _dragUntilMouseUp:accepted:] + 1152
+	11  AppKit                              0x00000001bd10fc5c _handleBeginDraggingSession + 108
+	12  CoreFoundation                      0x00000001ba047dac __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36
+	13  CoreFoundation                      0x00000001ba047bf8 __CFRunLoopDoObservers + 572
+	14  CoreFoundation                      0x00000001ba04663c CFRunLoopRunSpecific + 512
+	15  HIToolbox                           0x00000001c2bbc990 RunCurrentEventLoopInMode + 292
+	16  HIToolbox                           0x00000001c2bbc61c ReceiveNextEventCommon + 320
+	17  HIToolbox                           0x00000001c2bbc4c4 _BlockUntilNextEventMatchingListInModeWithFilter + 72
+	18  AppKit                              0x00000001bcb9baec _DPSNextEvent + 844
+	19  AppKit                              0x00000001bcb9a390 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1332
+	20  AppKit                              0x00000001bcb8c3b0 -[NSApplication run] + 596
+	21  AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	22  iTerm2                              0x000000010409f5d4 main + 132
+	23  dyld                                0x00000001055950f4 start + 520
+)
+1657220399.522801 PSMTabDragAssistant.m:650 (-[PSMTabDragAssistant finishDrag]): Drag of 0x0 finished from
+(
+	0   iTerm2                              0x00000001040fe3f8 -[PSMTabDragAssistant finishDrag] + 244
+	1   AppKit                              0x00000001bceb8f4c -[NSCoreDragManager _dragUntilMouseUp:accepted:] + 1684
+	2   AppKit                              0x00000001bd10fc5c _handleBeginDraggingSession + 108
+	3   CoreFoundation                      0x00000001ba047dac __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36
+	4   CoreFoundation                      0x00000001ba047bf8 __CFRunLoopDoObservers + 572
+	5   CoreFoundation                      0x00000001ba04663c CFRunLoopRunSpecific + 512
+	6   HIToolbox                           0x00000001c2bbc990 RunCurrentEventLoopInMode + 292
+	7   HIToolbox                           0x00000001c2bbc61c ReceiveNextEventCommon + 320
+	8   HIToolbox                           0x00000001c2bbc4c4 _BlockUntilNextEventMatchingListInModeWithFilter + 72
+	9   AppKit                              0x00000001bcb9baec _DPSNextEvent + 844
+	10  AppKit                              0x00000001bcb9a390 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1332
+	11  AppKit                              0x00000001bcb8c3b0 -[NSApplication run] + 596
+	12  AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	13  iTerm2                              0x000000010409f5d4 main + 132
+	14  dyld                                0x00000001055950f4 start + 520
+)
+1657256433.152137 PSMTabBarControl.m:1477 (-[PSMTabBarControl mouseDragged:]): Start dragging with mouse down event NSEvent: type=LMouseDown loc=(538.98,721.891) time=1209142.4 flags=0 win=0x11ac41470 winNum=21637 ctxt=0x0 evNum=15666 click=1 buttonNumber=0 pressure=1 deviceID:0x400000076bd6842 subtype=NSEventSubtypeTouch in window 0x11ac41470 with frame {{2076, 398}, {1088, 756}}
+1657256433.158626 PSMTabDragAssistant.m:909 (-[PSMTabDragAssistant distributePlaceholdersInTabBar:]): distributePlaceholdersInTabBar draggedCell=<PSMTabBarCell: 0x12ee3b7e0 representedObject=<NSTabViewItem '-zsh': 0x6000014a8f30> identifier=<PTYTab: 0x12ee12ed0 label=-zsh objectCount=2> objectCount=2>
+1657256433.158935 PSMTabDragAssistant.m:879 (-[PSMTabDragAssistant distributePlaceholdersInTabBar:withDraggedCell:]): distributePlaceholdersInTabBar:withDraggedCell:<PSMTabBarCell: 0x12ee3b7e0 representedObject=<NSTabViewItem '-zsh': 0x6000014a8f30> identifier=<PTYTab: 0x12ee12ed0 label=-zsh objectCount=2> objectCount=2>
+1657256433.165908 PSMTabDragAssistant.m:190 (-[PSMTabDragAssistant startDraggingCell:fromTabBar:withMouseDownEvent:]): Begin dragging session for tab bar 0x14816b260
+1657256433.168311 PSMTabBarControl.m:1624 (-[PSMTabBarControl beginDraggingSessionWithItems:event:source:]): Begin dragging tab bar control 0x14816b260 with event NSEvent: type=LMouseDown loc=(538.98,721.891) time=1209142.4 flags=0 win=0x11ac41470 winNum=21637 ctxt=0x0 evNum=15666 click=1 buttonNumber=0 pressure=1 deviceID:0x400000076bd6842 subtype=NSEventSubtypeTouch source from
+(
+	0   iTerm2                              0x00000001040b21b4 -[PSMTabBarControl beginDraggingSessionWithItems:event:source:] + 196
+	1   iTerm2                              0x00000001040fc3e0 -[PSMTabDragAssistant startDraggingCell:fromTabBar:withMouseDownEvent:] + 1176
+	2   iTerm2                              0x00000001040b195c -[PSMTabBarControl mouseDragged:] + 1764
+	3   AppKit                              0x00000001bcd0da0c -[NSWindow(NSEventRouting) _reallySendEvent:isDelayedEvent:] + 5920
+	4   AppKit                              0x00000001bcd0c080 -[NSWindow(NSEventRouting) sendEvent:] + 348
+	5   AppKit                              0x00000001bcd0afe4 -[NSApplication(NSEvent) sendEvent:] + 2776
+	6   iTerm2                              0x0000000104149144 -[iTermApplication sendEvent:] + 372
+	7   AppKit                              0x00000001bcfc3588 -[NSApplication _handleEvent:] + 76
+	8   AppKit                              0x00000001bcb8c3d8 -[NSApplication run] + 636
+	9   AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	10  iTerm2                              0x000000010409f5d4 main + 132
+	11  dyld                                0x00000001055950f4 start + 520
+)
+1657256433.171706 PSMTabDragAssistant.m:698 (-[PSMTabDragAssistant draggingBeganAt:]): Drag of 0x14816b260 began with current event NSEvent: type=LMouseDragged loc=(543.574,712.055) time=1209142.7 flags=0 win=0x11ac41470 winNum=21637 ctxt=0x0 evNum=15666 click=1 buttonNumber=0 pressure=1 deltaX=2.000000 deltaY=3.000000 deviceID:0x400000076bd6842 subtype=NSEventSubtypeTouch in window with frame {{2076, 398}, {1088, 756}} from
+(
+	0   iTerm2                              0x00000001040fe948 -[PSMTabDragAssistant draggingBeganAt:] + 420
+	1   AppKit                              0x00000001bceb89f8 -[NSCoreDragManager _dragUntilMouseUp:accepted:] + 320
+	2   AppKit                              0x00000001bd10fc5c _handleBeginDraggingSession + 108
+	3   CoreFoundation                      0x00000001ba047dac __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36
+	4   CoreFoundation                      0x00000001ba047bf8 __CFRunLoopDoObservers + 572
+	5   CoreFoundation                      0x00000001ba04663c CFRunLoopRunSpecific + 512
+	6   HIToolbox                           0x00000001c2bbc990 RunCurrentEventLoopInMode + 292
+	7   HIToolbox                           0x00000001c2bbc61c ReceiveNextEventCommon + 320
+	8   HIToolbox                           0x00000001c2bbc4c4 _BlockUntilNextEventMatchingListInModeWithFilter + 72
+	9   AppKit                              0x00000001bcb9baec _DPSNextEvent + 844
+	10  AppKit                              0x00000001bcb9a390 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1332
+	11  AppKit                              0x00000001bcb8c3b0 -[NSApplication run] + 596
+	12  AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	13  iTerm2                              0x000000010409f5d4 main + 132
+	14  dyld                                0x00000001055950f4 start + 520
+)
+1657256434.722749 PSMTabDragAssistant.m:650 (-[PSMTabDragAssistant finishDrag]): Drag of 0x14816b260 finished from
+(
+	0   iTerm2                              0x00000001040fe3f8 -[PSMTabDragAssistant finishDrag] + 244
+	1   AppKit                              0x00000001bceb8f4c -[NSCoreDragManager _dragUntilMouseUp:accepted:] + 1684
+	2   AppKit                              0x00000001bd10fc5c _handleBeginDraggingSession + 108
+	3   CoreFoundation                      0x00000001ba047dac __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36
+	4   CoreFoundation                      0x00000001ba047bf8 __CFRunLoopDoObservers + 572
+	5   CoreFoundation                      0x00000001ba04663c CFRunLoopRunSpecific + 512
+	6   HIToolbox                           0x00000001c2bbc990 RunCurrentEventLoopInMode + 292
+	7   HIToolbox                           0x00000001c2bbc61c ReceiveNextEventCommon + 320
+	8   HIToolbox                           0x00000001c2bbc4c4 _BlockUntilNextEventMatchingListInModeWithFilter + 72
+	9   AppKit                              0x00000001bcb9baec _DPSNextEvent + 844
+	10  AppKit                              0x00000001bcb9a390 -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1332
+	11  AppKit                              0x00000001bcb8c3b0 -[NSApplication run] + 596
+	12  AppKit                              0x00000001bcb5da84 NSApplicationMain + 1064
+	13  iTerm2                              0x000000010409f5d4 main + 132
+	14  dyld                                0x00000001055950f4 start + 520
+)

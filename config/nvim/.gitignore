@@ -1,0 +1,5 @@
+# MacOS specific file types 
+**/.DS_Store
+
+# packer-compiled files 
+plugin/packer_compiled.lua
