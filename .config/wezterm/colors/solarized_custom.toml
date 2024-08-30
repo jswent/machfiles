@@ -1,0 +1,55 @@
+[metadata]
+name = 'Solarized Custom'
+
+[colors]
+ansi = [
+  '#073642',
+  '#dc322f',
+  '#859900',
+  '#b58900',
+  '#23a9d5',
+  '#d33682',
+  '#2aa198',
+  '#eee8d5',
+]
+background = '#1b2028'
+brights = [
+  '#6c7793',
+  '#cb4b16',
+  '#586e75',
+  '#4b5975',
+  '#839496',
+  '#6c71c4',
+  '#93a1a1',
+  '#fdf6e3',
+]
+compose_cursor = '#839496'
+cursor_bg = '#839496'
+cursor_border = '#839496'
+cursor_fg = '#1b2028'
+foreground = '#839496'
+selection_bg = '#839496'
+selection_fg = '#1b2028'
+
+[colors.tab_bar]
+background = '#073642'
+
+[colors.tab_bar.active_tab]
+bg_color = '#1b2028'
+fg_color = '#839496'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#073642'
+fg_color = '#586e75'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#1b2028'
+fg_color = '#839496'
+
+[colors.tab_bar.new_tab]
+bg_color = '#073642'
+fg_color = '#586e75'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#1b2028'
+fg_color = '#839496'
