@@ -33,7 +33,7 @@ update_nvim_theme() {
 
 	# Change theme for each Neovim instance
 	for server in $NVIM_SERVERS; do
-		nvim --server "$server" --remote-send ":colorscheme $colorscheme<CR>"
+		nvim --server "$server" --remote-expr "luaeval('vim.cmd(\"colorscheme ${colorscheme}\")')"
 	done
 }
 
