@@ -1,0 +1,4 @@
+theme = light:tokyonight-day_custom,dark:tokyonight_custom
+
+background-opacity = 0.9
+background-blur = true
