@@ -66,6 +66,7 @@ local C = {
 	window_padding = padding.default,
 	default_cursor_style = "BlinkingBar",
 	window_decorations = "RESIZE",
+	max_fps = 120,
 }
 
 return utils.deep_extend("force", C, ui_for_appearance(get_appearance()))
