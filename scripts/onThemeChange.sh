@@ -37,16 +37,29 @@ update_nvim_theme() {
   done
 }
 
+update_nvim_appearance() {
+  local appearance="$1"
+  # Find all Neovim server sockets
+  NVIM_SERVERS=$(find /tmp/* -name 'nvim*' -type s 2>/dev/null)
+
+  # Change theme for each Neovim instance
+  for server in $NVIM_SERVERS; do
+    nvim --server "$server" --remote-expr "luaeval('require(\"jswent.colorscheme\").set_appearance(\"$appearance\")')"
+  done
+}
+
 # Check that dark mode is received from service
 if [ -n "$DARKMODE" ]; then
   if [ "$DARKMODE" -eq 1 ]; then
     echo "Switching to dark mode"
     update_kitty_theme "$KITTY_DIR/themes/solarized_custom.conf"
-    update_nvim_theme "tokyonight-moon"
+    # update_nvim_theme "tokyonight-moon"
+    update_nvim_appearance "dark"
   elif [ "$DARKMODE" -eq 0 ]; then
     echo "Switching to light mode"
     update_kitty_theme "$KITTY_DIR/themes/solarized_light.conf"
-    update_nvim_theme "tokyonight-day"
+    # update_nvim_theme "tokyonight-day"
+    update_nvim_appearance "light"
   else
     echo "Invalid DARKMODE value: $DARKMODE"
   fi
