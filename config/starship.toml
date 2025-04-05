@@ -1,0 +1,24 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+gcloud.disabled = true
+
+palette = "rose-pine"
+
+[git_status]
+modified = "✚${count}"
+untracked = "[…${count}](white)"
+staged = "[●${count}](green)"
+stashed = ""
+deleted = ""
+
+[palettes.rose-pine]
+overlay = '#26233a'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ebbcba'
+pine = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
+
+[directory]
+style = "fg:foam bold"
