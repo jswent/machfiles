@@ -67,6 +67,9 @@ local C = {
 	default_cursor_style = "BlinkingBar",
 	window_decorations = "RESIZE",
 	max_fps = 120,
+	set_environment_variables = {
+		TRANSPARENT = "true",
+	},
 }
 
 return utils.deep_extend("force", C, ui_for_appearance(get_appearance()))
