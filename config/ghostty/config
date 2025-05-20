@@ -1,5 +1,9 @@
+auto-update-channel = tip
+
 # theme = light:tokyonight-day_custom,dark:tokyonight_custom
 theme = light:tokyonight-day_custom,dark:rose-pine
 
 background-opacity = 0.9
 background-blur = true
+
+env = TRANSPARENT=true
