@@ -1,0 +1,12 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+gcloud.disabled = true
+
+# palette = "rose-pine"
+
+[git_status]
+modified = "✚${count}"
+untracked = "[…${count}](white)"
+staged = "[●${count}](green)"
+stashed = ""
+deleted = ""
