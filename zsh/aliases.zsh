@@ -13,7 +13,6 @@ alias ls='eza --icons --color=always --group-directories-first'
 alias ll='ls -lF'
 alias lsa='ls -lah'
 alias clr=';clear;test -n "$TMUX" && tmux clear-history'
-alias btop='btop --utf-force'
 alias nvim='nvim --listen /tmp/nvim-$RANDOM'
 alias vi='nvim'
 

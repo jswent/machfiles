@@ -23,23 +23,24 @@ setopt appendhistory
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 
+eval "$(starship init zsh)"
+
 source "${ZINIT_HOME}/zinit.zsh"
 
 zinit ice depth=1
 
 zinit wait lucid light-mode for \
-  atinit"zicompinit; zicdreplay" \
+  atload"zicompinit; zicdreplay" \
       zsh-users/zsh-syntax-highlighting \
   atload"_zsh_autosuggest_start; bindkey '^ ' autosuggest-accept" \
       zsh-users/zsh-autosuggestions \
   blockf atpull'zinit creinstall -q .' \
       zsh-users/zsh-completions \
   atload"eval $(zoxide init zsh)" \
-      ajeetdsouza/zoxide
+      ajeetdsouza/zoxide \
 
-alias ls='eza --icons --color=always --group-directories-first'
-alias ll='ls -lF'
-alias lsa='ls -lah'
-alias nvim='nvim --listen /tmp/nvim-$RANDOM'
+source "$MACHFILES_DIR/zsh/exports.zsh"
+source "$MACHFILES_DIR/zsh/aliases.zsh"
 
-eval "$(starship init zsh)"
+[[ -f "$HOME/.aliases.zsh" ]] && source "$HOME/.aliases.zsh"
+[[ -f "$HOME/.ext.zsh" ]] && source "$HOME/.ext.zsh"
