@@ -1,0 +1,16 @@
+DOMAIN_NAME="web"
+FORMULAE=(
+  "node"
+  "yarn"
+  "php"
+  "sqlite"
+  "pnpm"
+  "bun"
+)
+CASKS=(
+  "zen-browser"
+  "firefox@developer-edition"
+  "vlc"
+  "slack"
+  "legcord"
+)

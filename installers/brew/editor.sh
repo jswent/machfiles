@@ -1,0 +1,11 @@
+DOMAIN_NAME="editor"
+FORMULAE=(
+  "bat"
+  "neovim"
+)
+CASKS=(
+  "cursor"
+  "visual-studio-code"
+  "emacs"
+  "textmate"
+)

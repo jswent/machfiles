@@ -41,14 +41,10 @@ setup_environment() {
     fi
 
     # Handle environment variable persistence
-    if [ -n "$ZSH" ] && [ -d "$ZSH" ]; then
-      # Create snippets directory if it doesn't exist
-      mkdir -p "$ZSH/snippets"
-
-      if ! grep -q "export MACHFILES_DIR" "$ZSH/snippets/env.zsh" 2>/dev/null; then
-        echo "export MACHFILES_DIR=$MACHFILES_DIR" >>"$ZSH/snippets/env.zsh"
-        debug_print "Added MACHFILES_DIR to $ZSH/snippets/env.zsh"
-      fi
+    if [ ! -e "$HOME/.zshrc" ]; then
+      debug_print "No .zshrc found, linking machfiles .zshrc"
+      ln -s "$MACHFILES_DIR/.zshrc" "$HOME/.zshrc"
+      debug_print "Created .zshrc symlink to $MACHFILES_DIR/.zshrc"
     else
       # Determine current shell
       current_shell=$(basename "$SHELL")
@@ -67,6 +63,8 @@ setup_environment() {
 
 # Source the installer scripts
 source ./installers/dark-mode-notify.sh
+source ./installers/zsh.sh
+source ./installers/homebrew.sh
 # source other installers...
 
 # Call setup_environment before showing menu
@@ -74,7 +72,9 @@ setup_environment
 
 show_menu() {
   echo "1) Install everything"
-  echo "2) Install dark-mode-notify"
+  echo "2) Install zsh configuration"
+  echo "3) Install homebrew and packages"
+  echo "4) Install dark-mode-notify"
   # other options...
   echo "q) Quit"
 }
@@ -83,10 +83,18 @@ handle_choice() {
   case "$1" in
   1)
     # Install everything
+    install_zsh || echo "Failed to install zsh configuration"
+    install_homebrew || echo "Failed to install homebrew"
     install_dark_mode_notify || echo "Failed to install dark-mode-notify"
     # other installations...
     ;;
   2)
+    install_zsh || echo "Failed to install zsh configuration"
+    ;;
+  3)
+    install_homebrew || echo "Failed to install homebrew"
+    ;;
+  4)
     install_dark_mode_notify || echo "Failed to install dark-mode-notify"
     ;;
   q)
