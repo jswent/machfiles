@@ -16,3 +16,6 @@ export BUN_INSTALL="$HOME/.local/bun"
 export RUSTUP_HOME="$HOME/.config/rustup"
 export CARGO_HOME="$HOME/.local/cargo"
 export PATH="$CARGO_HOME/bin:$PATH"
+
+# Local bin
+export PATH="$HOME/.local/bin:$PATH"
