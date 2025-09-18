@@ -1,9 +1,11 @@
-auto-update-channel = tip
+# auto-update-channel = tip
 
 # theme = light:tokyonight-day_custom,dark:tokyonight_custom
-theme = light:tokyonight-day_custom,dark:rose-pine
+# theme = light:tokyonight-day_custom,dark:rose-pine
+theme = light:xcodelight,dark:rose-pine
 
 background-opacity = 0.9
 background-blur = true
 
 env = TRANSPARENT=true
+keybind = shift+enter=text:\n
