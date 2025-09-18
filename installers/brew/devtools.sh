@@ -23,6 +23,8 @@ FORMULAE=(
   "starship"
   "ruby"
   "readline"
+  "btop"
+  "jq"
 )
 CASKS=(
   "doxygen"
@@ -31,4 +33,5 @@ CASKS=(
   "iterm2"
   "kitty"
   "wezterm"
+  "docker"
 )
