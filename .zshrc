@@ -38,6 +38,15 @@ zinit wait lucid light-mode for \
       zsh-users/zsh-completions \
   atload"eval $(zoxide init zsh)" \
       ajeetdsouza/zoxide \
+  atload'FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border $FZF_THEME_OPTS"; source <(fzf --zsh)' \
+      zdharma-continuum/null
+
+export FZF_THEME_OPTS="
+  --color=fg:-1,hl:13
+  --color=fg+:15,bg+:0,hl+:13
+  --color=border:8,header:14,gutter:-1
+  --color=spinner:11,info:14
+  --color=pointer:4,marker:9,prompt:12"
 
 source "$MACHFILES_DIR/zsh/exports.zsh"
 source "$MACHFILES_DIR/zsh/aliases.zsh"
