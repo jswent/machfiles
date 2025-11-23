@@ -5,7 +5,7 @@ FORMULAE=(
 )
 CASKS=(
   "cursor"
-  "visual-studio-code"
   "emacs"
   "textmate"
+  "visual-studio-code"
 )

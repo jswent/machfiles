@@ -1,8 +1,8 @@
 DOMAIN_NAME="tweaks"
 FORMULAE=()
 CASKS=(
-  "macfuse"
-  "raycast"
   "keycastr"
+  "macfuse"
   "numi"
+  "raycast"
 )
