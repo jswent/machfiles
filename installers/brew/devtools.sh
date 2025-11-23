@@ -17,6 +17,7 @@ FORMULAE=(
   "lazygit"
   "mongosh"
   "openjdk"
+  "pkg-config"
   "readline"
   "ripgrep"
   "ruby"
