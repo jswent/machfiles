@@ -62,12 +62,26 @@ Organized into domains for easy management:
 
 - **Tweaks**: System utilities and enhancements
 
-### 3. Dark Mode Automation
+### 3. macOS Appearance Automation
 
-- Installs [dark-mode-notify](https://github.com/bouk/dark-mode-notify)
+- Installs [dark-mode-notify](https://github.com/jswent/dark-mode-notify)
 - Automatically updates themes when macOS appearance changes
 - Syncs terminal (Kitty), editor (Neovim), and prompt (Starship) themes
 - Works with all running instances simultaneously
+
+### 4. LaunchAgents
+
+Automatically installs and configures macOS LaunchAgents from the `LaunchAgents/` directory:
+
+- **dark-mode-notify** - Monitors macOS appearance changes and triggers theme switching
+- **brew-update** - Scheduled homebrew updates and maintenance
+- Any new additions not documented here
+
+All LaunchAgents are:
+
+- Copied to `~/Library/LaunchAgents/`
+- Loaded with `launchctl` to run at startup
+- Configured with logging to `/tmp/` for debugging
 
 ## Usage
 
@@ -268,5 +282,5 @@ Built with these excellent tools:
 
 - [zinit](https://github.com/zdharma-continuum/zinit) - ZSH plugin manager
 - [starship](https://starship.rs/) - Cross-shell prompt
-- [dark-mode-notify](https://github.com/bouk/dark-mode-notify) - macOS appearance change notifications
+- [dark-mode-notify](https://github.com/jswent/dark-mode-notify) - macOS appearance change notifications
 - [Homebrew](https://brew.sh/) - Package manager for macOS
