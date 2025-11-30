@@ -63,8 +63,9 @@ setup_environment() {
 
 # Source the installer scripts
 source ./installers/dark-mode-notify.sh
-source ./installers/zsh.sh
 source ./installers/homebrew.sh
+source ./installers/launchd.sh
+source ./installers/zsh.sh
 # source other installers...
 
 # Call setup_environment before showing menu
@@ -75,6 +76,7 @@ show_menu() {
   echo "2) Install zsh configuration"
   echo "3) Install homebrew and packages"
   echo "4) Install dark-mode-notify"
+  echo "5) Install LaunchAgents"
   # other options...
   echo "q) Quit"
 }
@@ -86,6 +88,7 @@ handle_choice() {
     install_zsh || echo "Failed to install zsh configuration"
     install_homebrew || echo "Failed to install homebrew"
     install_dark_mode_notify || echo "Failed to install dark-mode-notify"
+    install_launchagents || echo "Failed to install LaunchAgents"
     # other installations...
     ;;
   2)
@@ -96,6 +99,9 @@ handle_choice() {
     ;;
   4)
     install_dark_mode_notify || echo "Failed to install dark-mode-notify"
+    ;;
+  5)
+    install_launchagents || echo "Failed to install LaunchAgents"
     ;;
   q)
     exit 0
@@ -112,4 +118,3 @@ while true; do
   read -p "Choose an option: " choice
   handle_choice "$choice"
 done
-

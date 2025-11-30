@@ -47,59 +47,17 @@ install_dark_mode_notify() {
     fi
   fi
 
-  # Setup LaunchAgent
-  LAUNCH_AGENTS_DIR="$HOME/Library/LaunchAgents"
-  debug_print "Creating LaunchAgents directory: $LAUNCH_AGENTS_DIR"
-  mkdir -p "$LAUNCH_AGENTS_DIR"
-
-  # Copy LaunchAgent plist from machfiles to Library/LaunchAgents
+  # Setup LaunchAgent using shared installer function
   PLIST_SOURCE="$MACHFILES_DIR/LaunchAgents/com.jswent.dark-mode-notify.plist"
-  PLIST_DEST="$LAUNCH_AGENTS_DIR/com.jswent.dark-mode-notify.plist"
+  debug_print "Installing LaunchAgent from: $PLIST_SOURCE"
 
-  debug_print "Checking for LaunchAgent plist at: $PLIST_SOURCE"
-  # Verify source plist exists
-  if [ ! -f "$PLIST_SOURCE" ]; then
-    echo "Error: LaunchAgent plist not found at $PLIST_SOURCE"
+  install_launchagent "$PLIST_SOURCE"
+  local launchagent_result=$?
+
+  if [ $launchagent_result -eq 1 ]; then
+    echo "Error: Failed to install LaunchAgent"
     [ -d "$TEMP_DIR" ] && rm -rf "$TEMP_DIR"
     return 1
-  fi
-
-  # Flag to track if we need to load/reload the LaunchAgent
-  NEED_RELOAD=false
-
-  # Compare files if destination exists
-  if [ -f "$PLIST_DEST" ]; then
-    debug_print "Comparing existing plist with source"
-    if ! cmp -s "$PLIST_SOURCE" "$PLIST_DEST"; then
-      debug_print "Plist files differ, updating"
-      echo "LaunchAgent plist has changed, updating..."
-      cp -f "$PLIST_SOURCE" "$PLIST_DEST"
-      NEED_RELOAD=true
-    else
-      debug_print "Plist files are identical"
-      echo "LaunchAgent plist is unchanged"
-    fi
-  else
-    debug_print "No existing plist found, installing new one"
-    echo "Installing LaunchAgent plist..."
-    cp -f "$PLIST_SOURCE" "$PLIST_DEST"
-    NEED_RELOAD=true
-  fi
-
-  # Check if LaunchAgent is loaded
-  debug_print "Checking LaunchAgent status"
-  if ! launchctl list | grep -q "com.jswent.dark-mode-notify"; then
-    debug_print "LaunchAgent not loaded, loading now"
-    echo "Loading LaunchAgent..."
-    launchctl load -w "$PLIST_DEST"
-  elif [ "$NEED_RELOAD" = true ]; then
-    debug_print "Reloading LaunchAgent due to plist changes"
-    echo "Reloading LaunchAgent..."
-    launchctl unload "$PLIST_DEST"
-    launchctl load -w "$PLIST_DEST"
-  else
-    debug_print "LaunchAgent already loaded and up to date"
-    echo "LaunchAgent is already loaded"
   fi
 
   # Cleanup with sudo if necessary
