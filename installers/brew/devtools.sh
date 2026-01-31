@@ -1,5 +1,7 @@
 DOMAIN_NAME="devtools"
 FORMULAE=(
+  "autoconf"
+  "automake"
   "btop"
   "ca-certificates"
   "clang-format"
