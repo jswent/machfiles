@@ -18,6 +18,7 @@ FORMULAE=(
   "go"
   "jq"
   "lazygit"
+  "libtool"
   "mongosh"
   "openjdk"
   "pkg-config"
