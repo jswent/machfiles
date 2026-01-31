@@ -11,6 +11,7 @@ FORMULAE=(
   "fmt"
   "fzf"
   "gcc"
+  "gh"
   "gnu-sed"
   "go"
   "jq"
