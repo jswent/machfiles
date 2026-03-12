@@ -37,5 +37,6 @@ CASKS=(
   "google-cloud-sdk"
   "iterm2"
   "kitty"
+  "linear-linear"
   "wezterm"
 )
