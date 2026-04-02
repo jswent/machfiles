@@ -9,8 +9,9 @@ FORMULAE=(
 )
 CASKS=(
   "firefox@developer-edition"
-  "legcord"
+  # "legcord"
   "slack"
   "vlc"
   "zen-browser"
 )
+
