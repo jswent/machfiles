@@ -31,7 +31,7 @@ FORMULAE=(
   "zoxide"
 )
 CASKS=(
-  "docker"
+  "orbstack"
   "doxygen"
   "ghostty"
   "google-cloud-sdk"
