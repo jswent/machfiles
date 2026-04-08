@@ -189,7 +189,8 @@ install_homebrew_packages() {
   # Show domain menu and handle selection
   while true; do
     show_domain_menu
-    read -p "Choose a domain to install: " choice
+    printf "Choose a domain to install: "
+    read -r choice || break
 
     if [ "$choice" = "q" ]; then
       break

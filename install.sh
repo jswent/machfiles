@@ -115,6 +115,7 @@ handle_choice() {
 # Main menu loop
 while true; do
   show_menu
-  read -p "Choose an option: " choice
+  printf "Choose an option: "
+  read -r choice || break
   handle_choice "$choice"
 done
