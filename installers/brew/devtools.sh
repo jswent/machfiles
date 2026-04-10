@@ -39,4 +39,6 @@ CASKS=(
   "kitty"
   "linear-linear"
   "wezterm"
+  "claude"
+  "lm-studio"
 )
